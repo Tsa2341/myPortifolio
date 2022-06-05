@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/64e85971-df27-405e-bf26-c85514ea477d/deploy-status)](https://app.netlify.com/sites/tsa2341-portifolio/deploys)
+
 # MyPortifolio
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.6.
