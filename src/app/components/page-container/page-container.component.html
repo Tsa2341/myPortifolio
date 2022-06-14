@@ -1,6 +1,6 @@
-<div class="main_container">
+<div class="main_container" #pageContainerRef>
   <div class="inner_container">
-    <app-navbar></app-navbar>
+    <app-navbar [pageContainer]="pageContainerRef"></app-navbar>
     <main>
       <ng-content></ng-content>
     </main>

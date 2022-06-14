@@ -28,6 +28,9 @@
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles/styles.scss"],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/styles"]
+            },
             "scripts": []
           },
           "configurations": {
@@ -90,7 +93,10 @@
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles/styles.scss"],
+            "styles": [
+              "src/styles/styles.scss",
+              "node_modules/animate.css/animate.css"
+            ],
             "scripts": []
           }
         }

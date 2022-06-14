@@ -15,6 +15,11 @@ import { NotFoundComponent } from './views/not-found/not-found.component';
 import { PageContainerComponent } from './components/page-container/page-container.component';
 import { HomePageComponent } from './views/home-page/home-page.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { AboutComponent } from './views/about/about.component';
+import { ProjectsComponent } from './views/projects/projects.component';
+import { ContactComponent } from './views/contact/contact.component';
+import { HomeIconComponent } from './components/home-icon/home-icon.component';
+import { BreadCrumbsIconComponent } from './components/bread-crumbs-icon/bread-crumbs-icon.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +28,11 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     NavbarComponent,
     PageContainerComponent,
     HomePageComponent,
+    AboutComponent,
+    ProjectsComponent,
+    ContactComponent,
+    HomeIconComponent,
+    BreadCrumbsIconComponent,
   ],
   imports: [
     BrowserModule,

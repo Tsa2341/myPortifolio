@@ -1,0 +1,27 @@
+@import "variables";
+
+.link {
+  font-size: 14px;
+
+  &:hover {
+    color: $primary;
+    cursor: pointer;
+  }
+}
+.home_link {
+  &:hover {
+    cursor: pointer;
+  }
+}
+.bread_crumbs {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .bread_crumbs {
+    display: block;
+  }
+  .list_links {
+    display: none !important;
+  }
+}

@@ -1,7 +1,22 @@
-<div class="container-fluid">
-  <ul class="list-unstyled">
-    <li>About</li>
-    <li>Projects</li>
-    <li>Contact Me</li>
-  </ul>
+<div class="d-flex flex-row justify-content-between w-100">
+  <app-home-icon
+    data="assets/icons/home-icon.svg"
+    routerLink="/home"
+    [style]="homeIconStyle"
+    [fill]="homeIconFill"
+    class="home_link"
+    (mouseover)="homeIconMouseOver()"
+    (mouseout)="homeIconMouseOut()"
+  ></app-home-icon>
+
+  <div class="d-flex flex-row gap-3 list_links">
+    <div routerLink="/about" class="link">About</div>
+    <div routerLink="/projects" class="link">projects</div>
+    <div routerLink="/contact" class="link">Contact</div>
+  </div>
+
+  <app-bread-crumbs-icon
+    [style]="breadCrumbsStyle"
+    class="bread_crumbs"
+  ></app-bread-crumbs-icon>
 </div>
