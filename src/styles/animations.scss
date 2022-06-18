@@ -1,0 +1,17 @@
+@keyframes rotate_3d_out {
+  from {
+    transform: rotateY(0deg) translateX(0%);
+  }
+  to {
+    transform: rotateY(-80deg);
+  }
+}
+
+@keyframes rotate_3d_in {
+  from {
+    transform: rotateY("40deg");
+  }
+  to {
+    transform: rotateY("0deg");
+  }
+}

@@ -1,11 +1,5 @@
-import {
-  Component,
-  ElementRef,
-  Input,
-  OnInit,
-  TemplateRef,
-} from '@angular/core';
-import { PageContainerComponent } from '../page-container/page-container.component';
+import { Component, Input, OnInit } from '@angular/core';
+import { links } from 'src/utils/navigation-links';
 
 @Component({
   selector: 'app-navbar',
@@ -18,6 +12,7 @@ export class NavbarComponent implements OnInit {
   homeIconStyle = { width: '25px', height: '25px' };
   breadCrumbsStyle = { width: '25px' };
   homeIconFill = this.homeIconDefaultColor;
+  links: Array<{ name: String; url: string }> = links;
 
   homeIconMouseOver() {
     this.homeIconFill = ['#005aff'];
@@ -27,6 +22,15 @@ export class NavbarComponent implements OnInit {
   homeIconMouseOut() {
     this.homeIconFill = this.homeIconDefaultColor;
     this.pageContainer?.classList.remove('black_class');
+  }
+
+  handleOpenDrawer() {
+    console.log(this.pageContainer?.classList);
+    if (this.pageContainer?.classList.contains('open_drawer')) {
+      this.pageContainer?.classList.remove('open_drawer');
+    } else {
+      this.pageContainer?.classList.add('open_drawer');
+    }
   }
 
   // console.log(typeof this.pageContainer);

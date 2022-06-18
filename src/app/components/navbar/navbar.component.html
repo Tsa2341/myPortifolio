@@ -10,12 +10,13 @@
   ></app-home-icon>
 
   <div class="d-flex flex-row gap-3 list_links">
-    <div routerLink="/about" class="link">About</div>
-    <div routerLink="/projects" class="link">projects</div>
-    <div routerLink="/contact" class="link">Contact</div>
+    <div *ngFor="let link of links" [routerLink]="[link.url]" class="link">
+      {{ link.name }}
+    </div>
   </div>
 
   <app-bread-crumbs-icon
+    (click)="handleOpenDrawer()"
     [style]="breadCrumbsStyle"
     class="bread_crumbs"
   ></app-bread-crumbs-icon>

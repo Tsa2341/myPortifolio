@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { links } from 'src/utils/navigation-links';
 
 @Component({
   selector: 'app-page-container',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page-container.component.scss'],
 })
 export class PageContainerComponent implements OnInit {
+  links: Array<{ name: string; url: string }> = links;
+
   constructor() {}
 
   ngOnInit(): void {}

@@ -1,8 +1,16 @@
-<div class="main_container" #pageContainerRef>
-  <div class="inner_container">
-    <app-navbar [pageContainer]="pageContainerRef"></app-navbar>
+<div class="main_container">
+  <div class="inner_container" #pageInnerContainerRef>
+    <app-navbar [pageContainer]="pageInnerContainerRef"></app-navbar>
     <main>
       <ng-content></ng-content>
     </main>
+  </div>
+  <div
+    class="drawer_container d-flex flex-column p-sm-3 p-4 align-items-center"
+    #drawerContainerRef
+  >
+    <p *ngFor="let link of links" [routerLink]="link.url" class="link">
+      {{ link.name }}
+    </p>
   </div>
 </div>
