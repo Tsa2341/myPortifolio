@@ -1,39 +1,35 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { linkHoverAnim } from 'src/animations/navigation.anim';
+// import { handleOpenDrawer } from 'src/helpers/bread-crumbs-icon.helper';
+import { breadCrumbsStyle } from 'src/utils/bread-crumbs.util';
 import { links } from 'src/utils/navigation-links';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
+  animations: [linkHoverAnim],
 })
 export class NavbarComponent implements OnInit {
-  @Input() pageContainer?: HTMLDivElement;
+  @Output() openDrawerEvent = new EventEmitter<void>();
+
   homeIconDefaultColor = ['black'];
   homeIconStyle = { width: '25px', height: '25px' };
-  breadCrumbsStyle = { width: '25px' };
   homeIconFill = this.homeIconDefaultColor;
   links: Array<{ name: String; url: string }> = links;
+  breadCrumbsStyle = breadCrumbsStyle;
+
+  handleOpenDrawer() {
+    this.openDrawerEvent.emit();
+  }
 
   homeIconMouseOver() {
     this.homeIconFill = ['#005aff'];
-    this.pageContainer?.classList.add('black_class');
   }
 
   homeIconMouseOut() {
     this.homeIconFill = this.homeIconDefaultColor;
-    this.pageContainer?.classList.remove('black_class');
   }
-
-  handleOpenDrawer() {
-    console.log(this.pageContainer?.classList);
-    if (this.pageContainer?.classList.contains('open_drawer')) {
-      this.pageContainer?.classList.remove('open_drawer');
-    } else {
-      this.pageContainer?.classList.add('open_drawer');
-    }
-  }
-
-  // console.log(typeof this.pageContainer);
 
   constructor() {}
 

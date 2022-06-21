@@ -10,7 +10,12 @@
   ></app-home-icon>
 
   <div class="d-flex flex-row gap-3 list_links">
-    <div *ngFor="let link of links" [routerLink]="[link.url]" class="link">
+    <div
+      [@linkHoverAnim]=""
+      *ngFor="let link of links"
+      [routerLink]="[link.url]"
+      class="link"
+    >
       {{ link.name }}
     </div>
   </div>

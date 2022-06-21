@@ -1,14 +1,28 @@
 <div class="main_container">
-  <div class="inner_container" #pageInnerContainerRef>
-    <app-navbar [pageContainer]="pageInnerContainerRef"></app-navbar>
+  <div
+    class="inner_container"
+    [@innerContainerSlideAnim]="showDrawer ? 'slided' : 'default'"
+  >
+    <app-navbar (openDrawerEvent)="handleOpenDrawer()"></app-navbar>
     <main>
       <ng-content></ng-content>
     </main>
   </div>
+
+  <!-- Will be shown on small screen only -->
   <div
-    class="drawer_container d-flex flex-column p-sm-3 p-4 align-items-center"
+    @drawerSlideInAnim
+    *ngIf="showDrawer"
+    class="drawer_container d-flex flex-column gap-3 align-items-center"
     #drawerContainerRef
   >
+    <div class="d-flex align-self-end">
+      <app-bread-crumbs-icon
+        (click)="handleOpenDrawer()"
+        [style]="breadCrumbsStyle"
+        class="bread_crumbs"
+      ></app-bread-crumbs-icon>
+    </div>
     <p *ngFor="let link of links" [routerLink]="link.url" class="link">
       {{ link.name }}
     </p>

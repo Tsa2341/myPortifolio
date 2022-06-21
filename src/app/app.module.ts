@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,7 +11,6 @@ import {
   provideRemoteConfig,
   getRemoteConfig,
 } from '@angular/fire/remote-config';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NotFoundComponent } from './views/not-found/not-found.component';
 import { PageContainerComponent } from './components/page-container/page-container.component';
 import { HomePageComponent } from './views/home-page/home-page.component';
