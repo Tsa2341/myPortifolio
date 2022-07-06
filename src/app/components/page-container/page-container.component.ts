@@ -22,6 +22,13 @@ export class PageContainerComponent implements OnInit {
     this.showDrawer = handleOpenDrawer(this.showDrawer).showDrawer;
   };
 
+  handleLinkMouseOver(e: MouseEvent) {
+    (e.target as HTMLElement).classList.add('link_hovered');
+  }
+  handleLinkMouseOut(e: MouseEvent) {
+    (e.target as HTMLElement).classList.remove('link_hovered');
+  }
+
   constructor() {}
 
   ngOnInit(): void {}

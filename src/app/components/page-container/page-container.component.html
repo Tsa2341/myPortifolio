@@ -20,10 +20,17 @@
       <app-bread-crumbs-icon
         (click)="handleOpenDrawer()"
         [style]="breadCrumbsStyle"
-        class="bread_crumbs"
+        style="cursor: pointer"
       ></app-bread-crumbs-icon>
     </div>
-    <p *ngFor="let link of links" [routerLink]="link.url" class="link">
+    <p
+      *ngFor="let link of links"
+      [routerLink]="link.url"
+      (mouseover)="handleLinkMouseOver($event)"
+      (mouseout)="handleLinkMouseOut($event)"
+      routerLinkActive="link_active"
+      class="link"
+    >
       {{ link.name }}
     </p>
   </div>

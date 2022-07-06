@@ -11,10 +11,12 @@
 
   <div class="d-flex flex-row gap-3 list_links">
     <div
-      [@linkHoverAnim]=""
+      (mouseover)="handleLinkMouseOver($event)"
+      (mouseout)="handleLinkMouseOut($event)"
       *ngFor="let link of links"
       [routerLink]="[link.url]"
       class="link"
+      routerLinkActive="link_active"
     >
       {{ link.name }}
     </div>
@@ -24,5 +26,6 @@
     (click)="handleOpenDrawer()"
     [style]="breadCrumbsStyle"
     class="bread_crumbs"
+    style="cursor: pointer"
   ></app-bread-crumbs-icon>
 </div>

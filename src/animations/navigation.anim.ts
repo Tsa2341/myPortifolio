@@ -32,6 +32,8 @@ export const innerContainerSlideAnim = trigger('innerContainerSlideAnim', [
 ]);
 
 export const linkHoverAnim = trigger('linkHoverAnim', [
-  state('hovered', style({ ['&::before , &::after']: '{display: flex;}' })),
-  state('default', style({ ['&::before , &::after']: '{display: *}' })),
+  state('hovered', style({ backgroundColor: 'green' })),
+  state('unhovered', style({ backgroundColor: 'none' })),
+
+  transition('* => *', [animate('2s ease-in-out')]),
 ]);
