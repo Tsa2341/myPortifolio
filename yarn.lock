@@ -1745,6 +1745,20 @@
   resolved "https://registry.yarnpkg.com/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz#b2ac626d6cb9c8718ab459166d4bb405b8ffa78b"
   integrity sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==
 
+"@ngrx/store-devtools@^14.0.1":
+  version "14.0.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/store-devtools/-/store-devtools-14.0.1.tgz#5e3f4fae642b1f41f0bede77a5c9615452aa9eb2"
+  integrity sha512-rTH8q+S+YGqitAywPchi1HSfOKORA+NBsCLPqYdkhUsq5aRPuYPxn1N9kc+V3K0aOkRbZ/UcRExtn5vsiaFe9w==
+  dependencies:
+    tslib "^2.0.0"
+
+"@ngrx/store@^14.0.1":
+  version "14.0.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-14.0.1.tgz#5a9de1bb0c322f0b4ce953339dc3ca4925c41af5"
+  integrity sha512-DoaH7MwRoE8KW6+c+mKczW7HrG9+Uuw+z8jWxZvL3wTnGyBaEOpu7GlVO/JN0nyz4/FW0MIBMYubCM5AAaaDpw==
+  dependencies:
+    tslib "^2.0.0"
+
 "@ngtools/webpack@14.0.2":
   version "14.0.2"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-14.0.2.tgz#92e52618be749866fd46c01c917294dc7203d7d9"
